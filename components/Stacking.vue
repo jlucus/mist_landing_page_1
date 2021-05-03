@@ -1,26 +1,30 @@
 <template>
   <div>
-    <div class="tool">
-        <div class="row head">
-        <div class="col-4">
-            <slot name="image"></slot>
-        </div>
-        <div class="col-8">
-            <div class="cur">
-                <slot name="title"></slot>
-            </div>
-        </div>
-        </div>
+      <div class="container-fluid scrollspy" id="staking">
+      <a href="#" class="addLiquid"> Add Liquidity </a>
 
-        <div class="body">
-            <slot name="body"></slot>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 col-12">
+            <stake-card />
+          </div>
+
+          <div class="col-lg-6 col-md-12 col-12">
+            <participation-card />
+          </div>
         </div>
+      </div>
+      <divider />
     </div>
   </div>
 </template>
 
 <script>
+import Divider from './Divider.vue'
+import ParticipationCard from './ParticipationCard.vue'
+import StakeCard from './StakeCard.vue'
 export default {
+  components: { ParticipationCard, StakeCard, Divider },
 
 }
 </script>
@@ -53,6 +57,7 @@ export default {
     height: 120px;
     background: linear-gradient(to bottom, transparent 0%, black 100%);
 }
+
 #staking h3 {
     font-size: 40px;
     text-transform: uppercase;
