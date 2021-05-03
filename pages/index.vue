@@ -82,7 +82,7 @@
           </div>
         </div>
       </div>
-      <img src="@/assets/img/divider.png" class="divider" />
+      <Divider />
     </div>
     <Footer />
   </main>
@@ -92,11 +92,13 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Tool from "../components/Tool";
+import Divider from '../components/Divider';
 export default {
   components: {
     Footer,
     Header,
     Tool,
+    Divider
   },
 };
 </script>
